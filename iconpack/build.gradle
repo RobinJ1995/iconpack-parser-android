@@ -63,22 +63,19 @@ artifacts {
     archives sourcesJar
 }
 
-group = 'com.sofakingforever.libraries' // Change this to match your package name
-version = '0.0.7' // Change this to match your version number
-
 
 install {
     repositories.mavenInstaller {
         pom.project {
             name 'IconPackParser'
-            description 'A library for finding out whether someone is on the naughty list or the nice list'
-            url 'https://github.com/sofakingforever/IconPackParser-Android'
-            inceptionYear '2017'
+            description 'Parse Android icon packs'
+            url 'https://github.com/RobinJ1995/iconpack-parser-android'
+            inceptionYear '2018'
 
             packaging 'aar'
-            groupId 'com.sofakingforever.libraries'
+            groupId 'be.robinj.android'
             artifactId 'iconpack'
-            version '0.0.7'
+            version '0.1.0'
 
             licenses {
                 license {
@@ -86,41 +83,12 @@ install {
                     url 'http://www.apache.org/licenses/LICENSE-2.0'
                 }
             }
-            scm {
-                connection 'https://github.com/northpolecoder/elf.git'
-                url 'https://github.com/northpolecoder/elf'
-
-            }
             developers {
                 developer {
-                    id = 'sofakingforever'
-//                    name 'Nick'
+                    id = 'RobinJ1995'
+                    name 'Robin Jacobs'
                 }
             }
-        }
-    }
-}
-
-Properties bintrayProperties = new Properties()
-bintrayProperties.load(project.rootProject.file('bintray.properties').newDataInputStream())
-
-bintray {
-    user = bintrayProperties.getProperty('user')
-    key = bintrayProperties.get('key')
-    publications = ['MyPublication']
-    configurations = ['archives']
-    pkg {
-        repo = 'libraries'
-        name = 'IconPackParser-Android'
-        userOrg = 'sofakingforever'
-        licenses = ['MIT']
-        vcsUrl = 'https://github.com/sofakingforever/IconPackParser-Android.git'
-        publish = true
-        version {
-            name = '0.0.7'
-            desc = 'IconPackParser-Android 0.0.7'
-            released = new Date()
-            vcsTag = 'v0.0.7'
         }
     }
 }
@@ -143,7 +111,7 @@ def pomConfig = {
     }
 
     scm {
-        url "https://github.com/sofakingforever/IconPackParser-Android"
+        url "https://github.com/RobinJ1995/iconpack-parser-android"
     }
 }
 
@@ -153,9 +121,9 @@ publishing {
 //            from android.sourceSets.main.java.srcDirs
             artifact sourcesJar
             artifact javadocJar
-            groupId 'com.sofakingforever.libraries'
+            groupId 'be.robinj.android'
             artifactId 'iconpack'
-            version '0.0.7'
+            version '0.1.0'
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'Your description of the lib')

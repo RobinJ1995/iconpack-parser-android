@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IconPackParser-Android.iml" filepath="$PROJECT_DIR$/IconPackParser-Android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iconpack/iconpack.iml" filepath="$PROJECT_DIR$/iconpack/iconpack.iml" />
+      <module fileurl="file:///data/Dropbox/Projects/iconpack-parser-android/iconpack/iconpack.iml" filepath="/data/Dropbox/Projects/iconpack-parser-android/iconpack/iconpack.iml" />
+      <module fileurl="file:///data/Dropbox/Projects/iconpack-parser-android/iconpack-parser-android.iml" filepath="/data/Dropbox/Projects/iconpack-parser-android/iconpack-parser-android.iml" />
     </modules>
   </component>
 </project>
